@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title *ngIf="!id" >Cadastrar</ion-title>
+    <ion-title *ngIf="id" >Editar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-item lines="none">
+  <ion-label position="stacked">Nome</ion-label>
+  <ion-input type="text" placeholder="Digite seu Nome"></ion-input>
+</ion-item>
+
+<ion-item lines="none">
+  <ion-label position="stacked">CPF</ion-label>
+  <ion-input maxlength="14" type="text" placeholder="Digite seu CPF"></ion-input>
+</ion-item>
+
+<ion-item lines="none">
+  <ion-label position="stacked">Data de Nascimento</ion-label>
+  <ion-datetime displayFormat="DD/MM/YYYY" placeholder="Selecione" cancelText="Cancelar" doneText="OK"></ion-datetime>
+</ion-item>
+
+<ion-item lines="none">
+  <ion-label position="stacked">Gênero</ion-label>
+  <ion-select placeholder="Selecione" cancelText="Cancelar">
+    <ion-select-option value="F">Feminino</ion-select-option>
+    <ion-select-option value="M">Masculino</ion-select-option>
+    <ion-select-option value="O">Outros</ion-select-option>
+  </ion-select>
+</ion-item>
+
+<ion-item lines="none">
+  <ion-label position="stacked">Celular</ion-label>
+  <ion-input maxlength="16" type="text" placeholder="Digite seu Celular"></ion-input>
+</ion-item>
+
+<ion-item lines="none">
+  <ion-label position="stacked">E-mail</ion-label>
+  <ion-input type="text" placeholder="Digite seu E-mail"></ion-input>
+</ion-item>
+
+<ion-item lines="none">
+  <ion-label position="stacked">Senha</ion-label>
+  <ion-input type="password" placeholder="Insira uma Senha"></ion-input>
+</ion-item>
+  
+  <ion-button *ngIf="id"  color="primary" expand="block" (click)="editar()">
+    Editar
+  </ion-button>
+
+</ion-content>
